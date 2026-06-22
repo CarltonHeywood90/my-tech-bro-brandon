@@ -1,29 +1,34 @@
+'use client';
+import { useState } from 'react';
 import Link from 'next/link';
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <nav className="flex items-center justify-between px-8 py-6 bg-slate-950 border-b border-slate-800">
-      {/* Top Left: Home Page Brand Link */}
-      <Link href="/" className="text-xl font-extrabold text-white hover:text-cyan-400 transition-colors">
-        My Tech Bro
-      </Link>
+    <nav className="border-b border-slate-800 bg-slate-950 p-6">
+      <div className="flex justify-between items-center max-w-6xl mx-auto">
+        <Link href="/" className="text-xl font-bold">MY TECH BRO</Link>
+        
+        {/* Hamburger Button */}
+        <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? "✕" : "☰"}
+        </button>
 
-      {/* Top Right: Navigation Links & Action Button */}
-      <div className="flex items-center gap-8">
-        <div className="flex gap-8 text-slate-300 font-medium">
-          <Link href="/services" className="hover:text-cyan-400 transition-colors">Services</Link>
-          <Link href="/about" className="hover:text-cyan-400 transition-colors">About</Link>
-          <Link href="/blog" className="hover:text-cyan-400 transition-colors">Blog</Link>
+        {/* Desktop Links */}
+        <div className="hidden md:flex gap-8">
+          <Link href="/blog" className="hover:text-cyan-400">Blog</Link>
+          <Link href="/consult" className="bg-cyan-600 px-4 py-2 rounded-lg">Schedule</Link>
         </div>
-
-        {/* Contrast Action Button */}
-        <Link 
-          href="/consult" 
-          className="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold py-2 px-6 rounded-full shadow-[0_0_15px_rgba(6,182,212,0.4)] transition-all"
-        >
-          Schedule Consult
-        </Link>
       </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="md:hidden mt-6 flex flex-col gap-4">
+          <Link href="/blog" className="p-2 border-b border-slate-800">Blog</Link>
+          <Link href="/consult" className="p-2">Schedule</Link>
+        </div>
+      )}
     </nav>
   );
 }
