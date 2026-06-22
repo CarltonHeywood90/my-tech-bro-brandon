@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+/* 
+  Global base styles for the My Tech Bro industrial aesthetic.
+  Using @apply ensures these styles stay within the Tailwind system.
+*/
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-100 antialiased font-sans selection:bg-cyan-500/30;
+  }
+
+  /* Optional: Smooth out focus states for your buttons/links */
+  :focus-visible {
+    @apply outline-2 outline-cyan-500 outline-offset-2;
+  }
+}
