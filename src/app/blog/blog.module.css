@@ -1,0 +1,45 @@
+.container {
+  width: min(100% - 3rem, 56rem);
+  margin: 0 auto;
+  padding: 6rem 0;
+}
+
+.title {
+  margin: 0 0 3rem;
+  font-size: clamp(2.75rem, 6vw, 3.25rem);
+  font-weight: 800;
+}
+
+.title span {
+  color: var(--color-accent);
+}
+
+.posts {
+  display: grid;
+  gap: 2rem;
+}
+
+.post {
+  display: block;
+  padding: 2rem;
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+  background: var(--color-surface);
+  transition: border-color 160ms ease;
+}
+
+.post:hover {
+  border-color: var(--color-accent);
+}
+
+.post h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.post p {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.875rem;
+}

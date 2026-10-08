@@ -1,0 +1,93 @@
+.article {
+  width: min(100% - 3rem, 48rem);
+  margin: 0 auto;
+  padding: 6rem 0;
+}
+
+.header {
+  margin-bottom: 3rem;
+}
+
+.header h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2.5rem, 6vw, 3.25rem);
+  font-weight: 800;
+}
+
+.header p {
+  margin: 0;
+  color: var(--color-accent);
+  font-weight: 500;
+}
+
+.content {
+  color: var(--color-muted);
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+
+.content h2,
+.content h3,
+.content h4 {
+  margin: 2.5rem 0 1rem;
+  color: var(--color-text);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.content h2 {
+  font-size: 1.875rem;
+}
+
+.content h3 {
+  font-size: 1.5rem;
+}
+
+.content h4 {
+  font-size: 1.25rem;
+}
+
+.content p,
+.content ul,
+.content ol,
+.content blockquote {
+  margin: 1.25rem 0;
+}
+
+.content ul,
+.content ol {
+  padding-left: 1.5rem;
+}
+
+.content a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.content a:hover {
+  color: var(--color-accent-hover);
+}
+
+.content blockquote {
+  padding-left: 1rem;
+  border-left: 3px solid var(--color-accent);
+}
+
+.content pre {
+  overflow-x: auto;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  background: var(--color-surface);
+}
+
+.content code {
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+.content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}

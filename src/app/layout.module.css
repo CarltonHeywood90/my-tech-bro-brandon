@@ -1,0 +1,12 @@
+.siteContent {
+  width: 100%;
+  margin-inline: auto;
+  container-name: site-shell;
+  container-type: inline-size;
+}
+
+@media (min-width: 64rem) {
+  .siteContent {
+    width: 66.6667vw;
+  }
+}

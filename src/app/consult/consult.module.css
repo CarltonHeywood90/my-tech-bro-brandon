@@ -1,0 +1,129 @@
+.container {
+  width: min(100% - 3rem, 72rem);
+  margin: 0 auto;
+  padding: 6rem 0;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 4rem;
+}
+
+.columns h1 {
+  margin: 0 0 1.5rem;
+  font-size: clamp(2.75rem, 6vw, 3.25rem);
+  font-weight: 800;
+}
+
+.accent {
+  color: var(--color-accent);
+}
+
+.intro {
+  margin: 0 0 2rem;
+  color: var(--color-muted);
+  font-size: 1.25rem;
+  line-height: 1.7;
+}
+
+.benefits {
+  display: grid;
+  margin: 0;
+  padding: 0;
+  gap: 1rem;
+  color: var(--color-muted);
+  list-style: none;
+}
+
+.formCard {
+  padding: 2rem;
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+  background: var(--color-surface);
+}
+
+.form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.field label {
+  color: var(--color-muted);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  background: var(--color-background);
+  color: var(--color-text);
+  font: inherit;
+}
+
+.field textarea {
+  resize: vertical;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: #8b98a8;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 1px;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 0.75rem;
+  border: 0;
+  border-radius: 0.5rem;
+  background: var(--color-accent);
+  color: var(--color-text);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 160ms ease;
+}
+
+.submitButton:hover {
+  background: var(--color-accent-hover);
+}
+
+@media (max-width: 48rem) {
+  .container {
+    padding: 4rem 0;
+  }
+
+  .columns {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@container site-shell (max-width: 48rem) {
+  .container {
+    padding: 4rem 0;
+  }
+
+  .columns {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
